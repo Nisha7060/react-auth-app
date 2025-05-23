@@ -1,13 +1,242 @@
+/* LoginPage.css */
+
 body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.auth-container {
+  background: #fff;
+  padding: 5px 50px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  width: 360px;
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #4b2c91;
+  font-size: 28px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+  padding: 14px 16px;
+  border: 1.8px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.auth-form input[type="email"]:focus,
+.auth-form input[type="password"]:focus {
+  border-color: #764ba2;
+  outline: none;
+  box-shadow: 0 0 5px #a88fed;
+}
+
+.btn-primary {
+  margin-top: 1px;
+  padding: 14px 0;
+  background: #764ba2;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #5a3480;
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-weight: 600;
+  margin-top: -10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.social-login {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0077b5;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-linkedin:hover {
+  background: #005983;
+}
+
+.linkedin-icon {
+  font-size: 20px;
+}
+
+.extra-links {
+  margin-top: 30px;
+  font-size: 15px;
+  color: #555;
+}
+
+.extra-links a {
+  color: #764ba2;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.extra-links a:hover {
+  color: #4b2c91;
+}
+
+@media (max-width: 400px) {
+  .auth-container {
+    width: 90%;
+    padding: 30px 25px;
+  }
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #555;
+  margin-top: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #764ba2;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] {
+  padding: 14px 16px;
+  border: 1.8px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.auth-form input:focus {
+  border-color: #764ba2;
+  outline: none;
+  box-shadow: 0 0 5px #a88fed;
+}
+
+.btn-primary {
+  margin-top: 5px;
+  padding: 14px 0;
+  background: #764ba2;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #5a3480;
+}
+
+.social-login {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0077b5;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-linkedin:hover {
+  background: #005983;
+}
+
+.linkedin-icon {
+  font-size: 20px;
+}
+
+.extra-links {
+  margin-top: 30px;
+  font-size: 15px;
+  color: #555;
+  text-align: center;
+}
+
+.extra-links a {
+  color: #764ba2;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.extra-links a:hover {
+  color: #4b2c91;
 }
