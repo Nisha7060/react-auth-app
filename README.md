@@ -1,30 +1,29 @@
+# 🔐 React Login Page with Google, LinkedIn & reCAPTCHA Integration
 
-🔐 React Authentication Login Page
-This project is a responsive and secure React-based login page that supports:
+This is a responsive and user-friendly login page built using **React**. It allows users to log in using:
+- 📧 Email and Password
+- 🌐 Google OAuth
+- 💼 LinkedIn OAuth
+- 🧠 Google reCAPTCHA for bot protection
 
-✅ Email & Password authentication with form validation
+It is designed with accessibility, form validation, and security considerations in mind.
 
-🌐 Google OAuth Login
+---
 
-🔗 LinkedIn OAuth Login
+## 🚀 Features
 
-🤖 Google reCAPTCHA for bot protection
+- ✅ Email and password login with validation
+- 🔐 Google Sign-In using `@react-oauth/google`
+- 💼 LinkedIn Sign-In via OAuth 2.0
+- 🧠 Google reCAPTCHA v2 validation
+- ⚠️ Real-time error handling
+- 📱 Responsive and clean UI
+- ♿ Accessible form with ARIA attributes
 
-🚀 Features
-🔒 Secure login with real-time form validation
+---
+## 📂 Project Structure
 
-🌍 Social login (Google, LinkedIn)
-
-🤖 Google reCAPTCHA integration
-
-⚠️ User-friendly error handling
-
-💅 Modern UI with responsive and accessible design
-
-📂 Project Structure
-bash
-Copy
-Edit
+```bash
 src/
 │
 ├── components/
@@ -46,6 +45,9 @@ src/
 ├── utils/
 │   └── validation.js             # Helper functions for form validations
 └── README.md                     # Project documentation
+
+
+
 🔧 Installation
 1. Clone the Repository
 bash
