@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# 🔐 React Authentication Login Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a responsive and accessible React-based login page that supports:
+- Email & Password authentication with form validation
+- Google OAuth Login
+- LinkedIn OAuth Login
+- Google reCAPTCHA for bot protection
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- 🔒 Secure login with form validation
+- 🌐 Social login (Google, LinkedIn)
+- 🤖 Google reCAPTCHA integration
+- ⚠️ Real-time error messages
+- 💅 Modern UI with accessibility support
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📂 Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+src/
+│
+├── components/
+│   └── ProtectedRoute.jsx        # Component to protect dashboard route if user is not authenticated
+│
+├── pages/
+│   ├── LoginPage.jsx             # Login component (email/password, Google, LinkedIn, reCAPTCHA)
+│   ├── SignUpPage.jsx            # User registration page
+│   ├── OTPPage.jsx               # OTP verification page
+│   ├── ForgotPasswordPage.jsx   # Forgot password form
+│   ├── ResetPasswordPage.jsx    # Page for entering new password
+│   └── DashboardPage.jsx        # User dashboard after login
+│
+├── App.js                        # Routing setup for all pages using React Router
+├── index.js                      # Main React entry file rendering <App />
+├── LoginPage.css                 # Styling specific to LoginPage component
+├── assets/                       # (Optional) Images, logos, etc.
+│   └── logo.png                  # Example logo image
+├── utils/                        # (Optional) Utilities and helpers
+│   └── validation.js             # Functions for form validation
+└── README.md                     # Project documentation
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🔧 Installation
+Clone the Repository
 
-### `npm run eject`
+bash
+Copy
+Edit
+git clone https://github.com/your-username/react-auth-page.git
+cd react-auth-page
+Install Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bash
+Copy
+Edit
+npm install
+Add Environment Configurations
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Replace the placeholder keys in LoginPage.jsx:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+js
+Copy
+Edit
+const GOOGLE_CLIENT_ID = 'your-google-client-id';
+const LINKEDIN_CLIENT_ID = 'your-linkedin-client-id';
+const RECAPTCHA_SITE_KEY = 'your-recaptcha-site-key';
+Google OAuth: Get your client ID
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+LinkedIn OAuth: Create an app
 
-## Learn More
+reCAPTCHA: Generate a key
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+▶️ Run the App
+bash
+Copy
+Edit
+npm run dev    # If using Vite
+# or
+npm start      # If using Create React App
+🔐 Authentication Flow
+Email/Password: Basic input validation & login
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Google Login: Using @react-oauth/google
 
-### Code Splitting
+LinkedIn Login: Using LinkedIn OAuth 2.0 URL redirection
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+reCAPTCHA: Must be completed to enable login
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+📘 User Stories
+Login with email and password
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Login using Google OAuth
 
-### Advanced Configuration
+Login using LinkedIn OAuth
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+CAPTCHA verification before login
 
-### Deployment
+Form validation with helpful error messages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+📄 License
+This project is licensed under the MIT License.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🙋‍♀️ Author
+Nisha Yadav
